@@ -1,0 +1,90 @@
+<!Doctype html>
+{% extends 'navbar_handler.html' %}
+{% block title %}Dashboard Handler{% endblock %}
+{% block css %}
+<style>
+    /* Add some basic styling for the page */
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .dashboard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-item {
+        width: 200px;
+        height: 150px;
+        padding: 15px;
+        margin: 10px;
+        border-radius: 8px;
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .total {
+        background-color: #9407b1;
+    }
+
+    .pending {
+        background-color: #d3350d;
+    }
+
+    .raised {
+        background-color: #08aec4;
+    }
+
+    .in-progress {
+        background-color: #0d4394;
+    }
+
+    .resolved {
+        background-color: #08c227;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<h1>Complaint Dashboard</h1>
+
+<div class="dashboard">
+    <div class="dashboard-item total">
+        <h2>Total Complaints</h2>
+        <p>{{ total_complaints }}</p>
+    </div>
+
+    <div class="dashboard-item pending">
+        <h2>Pending Complaints</h2>
+        <p>{{ pending_complaints }}</p>
+    </div>
+
+    <div class="dashboard-item raised">
+        <h2>Raised Complaints</h2>
+        <p>{{ raised_complaints }}</p>
+    </div>
+
+    <div class="dashboard-item in-progress">
+        <h2>In Progess Complaints</h2>
+        <p>{{ in_progress_complaints }}</p>
+    </div>
+
+    <div class="dashboard-item resolved">
+        <h2>Resolved Complaints</h2>
+        <p>{{ resolved_complaints }}</p>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block js %}
+{% endblock %}
