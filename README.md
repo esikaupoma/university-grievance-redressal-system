@@ -20,3 +20,7 @@ The system has four end users:
 - **Backend**: Django 4.1.7
 - **Database**: MySQL
 - **Frontend**: HTML, CSS, JavaScript
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit pull requests for any improvements or fixes.
